@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="main-title">O Guia do Present Perfect Continuous</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            background-image: radial-gradient(circle at top, #1e293b, #0f172a);
+        }
+        .container-card {
+            background-color: #1e293b;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem;
+            border-left: 6px solid #4a90e2;
+            max-width: 50rem;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container-card:hover {
+            transform: translateY(-5px);
+        }
+        .phrase-block {
+            background-color: #2b3a53;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #475569;
+            transition: all 0.2s ease-in-out;
+        }
+        .phrase-block:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        .explanation-formula {
+            font-weight: 700;
+            color: #cbd5e1;
+        }
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            position: relative;
+        }
+        .timeline-line {
+            width: 100%;
+            height: 4px;
+            background-color: #4a90e2;
+            position: relative;
+            border-radius: 2px;
+        }
+        .timeline-marker {
+            width: 1rem;
+            height: 1rem;
+            background-color: #6ee7b7;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px #6ee7b7;
+        }
+        .timeline-marker.start {
+            left: 0;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        .timeline-marker.end {
+            right: 0;
+            transform: translateY(-50%) translateX(50%);
+        }
+        .timeline-text {
+            position: absolute;
+            bottom: 1.5rem;
+            font-weight: bold;
+            color: #94a3b8;
+            white-space: nowrap;
+        }
+        .timeline-text.start {
+            left: 0;
+            transform: translateX(-50%);
+        }
+        .timeline-text.end {
+            right: 0;
+            transform: translateX(50%);
+        }
+        .timeline-text.action {
+            top: 1rem;
+            font-style: italic;
+            color: #6ee7b7;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .copy-btn {
+            background-color: #475569;
+            color: #e2e8f0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            float: right;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .copy-btn:hover {
+            background-color: #64748b;
+        }
+        #message-box {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2b3a53;
+            color: #e2e8f0;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .show {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 lg:p-16">
+    <div class="fixed top-6 right-6 z-50">
+        <button id="lang-switch-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200">
+            Switch to English
+        </button>
+    </div>
+
+    <div class="space-y-12 max-w-5xl mx-auto">
+        
+        <!-- Main title and explanation -->
+        <div class="container-card text-center">
+            <div class="phrase-block">
+                <h1 id="main-header" class="text-3xl font-extrabold text-white mb-4 flex items-center justify-center">
+                    <span class="mr-3">📚</span> O Guia Rápido do Present Perfect Continuous
+                </h1>
+                <p id="main-text" class="text-lg leading-relaxed text-gray-300">
+                    Esse tempo verbal foca na **duração e na continuidade** de uma ação que **começou no passado**. Essa ação pode ainda estar em andamento ou **ter acabado de terminar**, mas o seu **efeito ou resultado** é visível no presente. O mais importante é o **processo** ou a **persistência** da atividade.
+                </p>
+            </div>
+        </div>
+
+        <hr class="border-t-2 border-slate-700 my-8">
+
+        <!-- The Core Concept: Duration and Continuity -->
+        <div class="container-card">
+            <h2 id="core-concept-header" class="text-2xl font-bold text-white mb-6 text-center">O Conceito Central: Duração e Resultado</h2>
+            
+            <p id="core-concept-text" class="text-lg leading-relaxed text-gray-300 mb-8 text-center">
+                Pense no Present Perfect Continuous como uma linha contínua que conecta o passado e o presente de duas formas.
+            </p>
+
+            <div class="space-y-12">
+                <!-- Case 1: Action in progress -->
+                <div class="flex flex-col items-center">
+                    <p id="case-1-title" class="text-lg font-bold text-teal-400 mb-4">Caso 1: Ação que ainda está acontecendo</p>
+                    <div class="timeline-container w-full">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-marker start"></div>
+                        <div class="timeline-marker end"></div>
+                        <span id="case-1-timeline-past" class="timeline-text start">O Passado</span>
+                        <span id="case-1-timeline-action" class="timeline-text action">Ação em Andamento...</span>
+                        <span id="case-1-timeline-present" class="timeline-text end">O Presente</span>
+                    </div>
+                </div>
+
+                <!-- Case 2: Action just finished -->
+                <div class="flex flex-col items-center">
+                    <p id="case-2-title" class="text-lg font-bold text-teal-400 mb-4">Caso 2: Ação que acabou de terminar, mas com resultado visível</p>
+                    <div class="timeline-container w-full">
+                        <div class="timeline-line w-2/3"></div>
+                        <div class="timeline-marker start"></div>
+                        <div class="timeline-marker" style="left: 66%; transform: translateY(-50%) translateX(-50%);"></div>
+                        <span id="case-2-timeline-past" class="timeline-text start">O Passado</span>
+                        <span id="case-2-timeline-action" class="timeline-text action" style="left: 33%; transform: translateX(-50%);">Ação Concluída</span>
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2">
+                            <svg class="w-12 h-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </div>
+                        <span id="case-2-timeline-result" class="absolute right-0 bottom-4 font-bold text-gray-400 text-sm md:text-base">Resultado no Presente</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 mt-8">
+                <!-- Exemplo - Ação Contínua -->
+                <div class="phrase-block bg-slate-800 p-6 rounded-lg shadow-inner">
+                    <h3 id="continuous-action-title" class="text-xl font-bold text-sky-400 mb-4">Exemplo - Ação Contínua</h3>
+                    <p id="continuous-action-desc" class="text-sm text-gray-400 mb-6">Ação que começou no passado e ainda está em andamento.</p>
+                    
+                    <!-- Example 1 (Work) -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="continuous-ex1-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="continuous-ex1-en" class="italic text-gray-200 block">"I have been driving this project for 10 years."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="continuous-ex1-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="continuous-ex1-pt" class="italic text-gray-200 block">"Eu <span class="font-bold underline text-yellow-300">estou conduzindo</span> este projeto <span class="font-bold underline text-yellow-300">há 10 anos</span>."</span>
+                                <p id="continuous-ex1-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Presente do Indicativo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 2 (Work) -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="continuous-ex2-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="continuous-ex2-en" class="italic text-gray-200 block">"He has been managing the marketing team since 2020."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="continuous-ex2-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="continuous-ex2-pt" class="italic text-gray-200 block">"Ele <span class="font-bold underline text-yellow-300">tem gerenciado</span> a equipe de marketing <span class="font-bold underline text-yellow-300">desde 2020</span>."</span>
+                                <p id="continuous-ex2-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Presente Composto</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Example 3 (Work) -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="continuous-ex3-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="continuous-ex3-en" class="italic text-gray-200 block">"The company has been developing a new software for two years."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="continuous-ex3-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="continuous-ex3-pt" class="italic text-gray-200 block">"A empresa <span class="font-bold underline text-yellow-300">tem desenvolvido</span> um novo software <span class="font-bold underline text-yellow-300">há dois anos</span>."</span>
+                                <p id="continuous-ex3-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Presente Composto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 4 (Personal) -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="continuous-ex4-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="continuous-ex4-en" class="italic text-gray-200 block">"We have been planning our vacation for months."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="continuous-ex4-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="continuous-ex4-pt" class="italic text-gray-200 block">"Nós <span class="font-bold underline text-yellow-300">estamos planejando</span> nossas férias <span class="font-bold underline text-yellow-300">há meses</span>."</span>
+                                <p id="continuous-ex4-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Presente do Indicativo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exemplo - Ação Recém-Terminada -->
+                <div class="phrase-block bg-slate-800 p-6 rounded-lg shadow-inner">
+                    <h3 id="finished-action-title" class="text-xl font-bold text-sky-400 mb-4">Exemplo - Ação Recém-Terminada</h3>
+                    <p id="finished-action-desc" class="text-sm text-gray-400 mb-6">Ação que acabou de terminar e tem um resultado visível no presente.</p>
+                    
+                    <!-- Example 1 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex1-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex1-en" class="italic text-gray-200 block">"I'm tired because I have been working all night."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex1-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex1-pt" class="italic text-gray-200 block">"Estou cansado porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> a noite toda."</span>
+                                <p id="finished-ex1-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 2 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex2-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex2-en" class="italic text-gray-200 block">"She has been crying, that's why her eyes are red."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex2-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex2-pt" class="italic text-gray-200 block">"Ela <span class="font-bold underline text-yellow-300">estava chorando</span>, é por isso que os olhos dela estão vermelhos."</span>
+                                <p id="finished-ex2-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Imperfeito do Indicativo</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Example 3 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex3-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex3-en" class="italic text-gray-200 block">"He's out of breath because he has been running."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex3-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex3-pt" class="italic text-gray-200 block">"Ele está sem fôlego porque <span class="font-bold underline text-yellow-300">esteve correndo</span>."</span>
+                                <p id="finished-ex3-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 4 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex4-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex4-en" class="italic text-gray-200 block">"The ground is wet. It has been raining."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex4-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex4-pt" class="italic text-gray-200 block">"O chão está molhado. <span class="font-bold underline text-yellow-300">Tem chovido</span>."</span>
+                                <p id="finished-ex4-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 5 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex5-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex5-en" class="italic text-gray-200 block">"The students are tired because they have been studying all day."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex5-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex5-pt" class="italic text-gray-200 block">"Os alunos estão cansados porque <span class="font-bold underline text-yellow-300">estiveram estudando</span> o dia todo."</span>
+                                <p id="finished-ex5-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Example 6 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex6-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex6-en" class="italic text-gray-200 block">"My hands are dirty because I have been gardening."</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex6-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex6-pt" class="italic text-gray-200 block">"Minhas mãos estão sujas porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> no jardim."</span>
+                                <p id="finished-ex6-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Example 7 -->
+                    <div class="bg-slate-700 p-4 rounded-lg mb-4 shadow">
+                        <div class="flex flex-col md:flex-row md:space-x-6 w-full">
+                            <div class="flex-1 mb-4 md:mb-0">
+                                <span id="finished-ex7-en-label" class="font-bold text-emerald-400 block">Inglês:</span>
+                                <span id="finished-ex7-en" class="italic text-gray-200 block">"You look stressed. Have you been waiting for a long time?"</span>
+                            </div>
+                            <div class="flex-1">
+                                <span id="finished-ex7-pt-label" class="font-bold text-sky-400 block">Português:</span>
+                                <span id="finished-ex7-pt" class="italic text-gray-200 block">"Você parece estressado. <span class="font-bold underline text-yellow-300">Você esteve esperando</span> por muito tempo?"</span>
+                                <p id="finished-ex7-verb-tense" class="text-sm text-gray-400 mt-1">Tempo verbal: Pretérito Perfeito Composto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-t-2 border-slate-700 my-8">
+
+                <!-- Grammar Structure -->
+                <div class="container-card">
+                    <h2 id="grammar-header" class="text-2xl font-bold text-white mb-6 text-center">A Estrutura Gramatical</h2>
+                    <p id="grammar-text" class="text-lg leading-relaxed text-gray-300 mb-8 text-center">
+                        A fórmula é simples e não muda. Basta usar o auxiliar correto para o sujeito.
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Affirmative -->
+                        <div class="phrase-block">
+                            <h3 id="affirmative-header" class="text-xl font-bold text-white mb-2">Forma Afirmativa</h3>
+                            <p id="affirmative-text" class="text-lg leading-relaxed text-gray-300 mb-4">
+                                <span class="explanation-formula italic">**Sujeto + have/has + been + verb(-ing)**</span>
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('We have been learning English.')">Copiar</button>
+                                    <span class="italic text-gray-400">"We have been learning English."</span>
+                                </li>
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('She has been waiting for you.')">Copiar</button>
+                                    <span class="italic text-gray-400">"She has been waiting for you."</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Negative -->
+                        <div class="phrase-block">
+                            <h3 id="negative-header" class="text-xl font-bold text-white mb-2">Forma Negativa</h3>
+                            <p id="negative-text" class="text-lg leading-relaxed text-gray-300 mb-4">
+                                <span class="explanation-formula italic">**Sujeto + have/has + not + been + verb(-ing)**</span>
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('I haven\'t been sleeping well.')">Copiar</button>
+                                    <span class="italic text-gray-400">"I haven't been sleeping well."</span>
+                                </li>
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('He hasn\'t been feeling good.')">Copiar</button>
+                                    <span class="italic text-gray-400">"He hasn't been feeling good."</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Questions -->
+                        <div class="phrase-block">
+                            <h3 id="questions-header" class="text-xl font-bold text-white mb-2">Perguntas</h3>
+                            <p id="questions-text" class="text-lg leading-relaxed text-gray-300 mb-4">
+                                <span class="explanation-formula italic">**Have/Has + sujeto + been + verb(-ing)?**</span>
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('Have they been practicing?')">Copiar</button>
+                                    <span class="italic text-gray-400">"Have they been practicing?"</span>
+                                </li>
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('Has she been talking to you?')">Copiar</button>
+                                    <span class="italic text-gray-400">"Has she been talking to you?"</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="border-t-2 border-slate-700 my-8">
+
+                <!-- Difference with Present Perfect Simple -->
+                <div class="container-card">
+                    <h2 id="difference-header" class="text-2xl font-bold text-white mb-6 text-center">Processo vs. Resultado</h2>
+                    <p id="difference-text" class="text-lg leading-relaxed text-gray-300 mb-8 text-center">
+                        A principal diferença entre os dois tempos é o que você quer destacar.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="phrase-block border-l-4 border-l-red-400">
+                            <h3 id="simple-header" class="text-xl font-bold text-white mb-2">Present Perfect Simple</h3>
+                            <p id="simple-desc" class="text-lg leading-relaxed text-gray-300 mb-4 font-bold text-red-400">Foca no RESULTADO ou na quantidade</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('I have driven two projects to completion.')">Copiar</button>
+                                    <span class="italic text-gray-400">"I have driven two projects to completion."</span>
+                                    <br>
+                                    <span id="simple-ex-pt" class="text-sm text-gray-500">→ O foco é que os projetos foram concluídos.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="phrase-block border-l-4 border-l-green-400">
+                            <h3 id="continuous-header" class="text-xl font-bold text-white mb-2">Present Perfect Continuous</h3>
+                            <p id="continuous-desc" class="text-lg leading-relaxed text-gray-300 mb-4 font-bold text-green-400">Foca na DURAÇÃO ou no PROCESSO</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>
+                                    <button class="copy-btn" onclick="copyToClipboard('I have been driving this project for six months.')">Copiar</button>
+                                    <span class="italic text-gray-400">"I have been driving this project for six months."</span>
+                                    <br>
+                                    <span id="continuous-ex-pt" class="text-sm text-gray-500">→ O foco é no período de tempo da ação.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="message-box"></div>
+
+    <script>
+        const translations = {
+            en: {
+                button: "Mudar para Português",
+                mainHeader: "📚 The Quick Guide to the Present Perfect Continuous",
+                mainText: "This verb tense focuses on the **duration and continuity** of an action that **started in the past**. This action may still be ongoing or have **just finished**, but its **effect or result** is visible in the present. The most important thing is the **process** or the **persistence** of the activity.",
+                coreConceptHeader: "The Core Concept: Duration and Result",
+                coreConceptText: "Think of the Present Perfect Continuous as a continuous line connecting the past and the present in two ways.",
+                case1Title: "Case 1: An action that is still happening",
+                case1TimelinePast: "The Past",
+                case1TimelineAction: "Action in Progress...",
+                case1TimelinePresent: "The Present",
+                case2Title: "Case 2: An action that just finished, but with a visible result",
+                case2TimelinePast: "The Past",
+                case2TimelineAction: "Action Completed",
+                case2TimelineResult: "Result in the Present",
+                continuousActionTitle: "Example - Continuous Action",
+                continuousActionDesc: "An action that started in the past and is still ongoing.",
+                continuousEx1EnLabel: "English:",
+                continuousEx1En: `"I have been driving this project for 10 years."`,
+                continuousEx1PtLabel: "Portuguese:",
+                continuousEx1Pt: `"Eu <span class="font-bold underline text-yellow-300">estou conduzindo</span> este projeto <span class="font-bold underline text-yellow-300">há 10 anos</span>."`,
+                continuousEx1VerbTense: "Verb Tense: Present Indicative",
+                continuousEx2EnLabel: "English:",
+                continuousEx2En: `"He has been managing the marketing team since 2020."`,
+                continuousEx2PtLabel: "Portuguese:",
+                continuousEx2Pt: `"Ele <span class="font-bold underline text-yellow-300">tem gerenciado</span> a equipe de marketing <span class="font-bold underline text-yellow-300">desde 2020</span>."`,
+                continuousEx2VerbTense: "Verb Tense: Present Composite",
+                continuousEx3EnLabel: "English:",
+                continuousEx3En: `"The company has been developing a new software for two years."`,
+                continuousEx3PtLabel: "Portuguese:",
+                continuousEx3Pt: `"A empresa <span class="font-bold underline text-yellow-300">tem desenvolvido</span> um novo software <span class="font-bold underline text-yellow-300">há dois anos</span>."`,
+                continuousEx3VerbTense: "Verb Tense: Present Composite",
+                continuousEx4EnLabel: "English:",
+                continuousEx4En: `"We have been planning our vacation for months."`,
+                continuousEx4PtLabel: "Portuguese:",
+                continuousEx4Pt: `"Nós <span class="font-bold underline text-yellow-300">estamos planejando</span> nossas férias <span class="font-bold underline text-yellow-300">há meses</span>."`,
+                continuousEx4VerbTense: "Verb Tense: Present Indicative",
+                finishedActionTitle: "Example - Recently Finished Action",
+                finishedActionDesc: "An action that just finished and has a visible result in the present.",
+                finishedEx1EnLabel: "English:",
+                finishedEx1En: `"I'm tired because I have been working all night."`,
+                finishedEx1PtLabel: "Portuguese:",
+                finishedEx1Pt: `"Estou cansado porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> a noite toda."`,
+                finishedEx1VerbTense: "Verb Tense: Past Perfect Composite",
+                finishedEx2EnLabel: "English:",
+                finishedEx2En: `"She has been crying, that's why her eyes are red."`,
+                finishedEx2PtLabel: "Portuguese:",
+                finishedEx2Pt: `"Ela <span class="font-bold underline text-yellow-300">estava chorando</span>, é por isso que os olhos dela estão vermelhos."`,
+                finishedEx2VerbTense: "Verb Tense: Past Imperfect Indicative",
+                finishedEx3EnLabel: "English:",
+                finishedEx3En: `"He's out of breath because he has been running."`,
+                finishedEx3PtLabel: "Portuguese:",
+                finishedEx3Pt: `"Ele está sem fôlego porque <span class="font-bold underline text-yellow-300">esteve correndo</span>."`,
+                finishedEx3VerbTense: "Verb Tense: Past Perfect Composite",
+                finishedEx4EnLabel: "English:",
+                finishedEx4En: `"The ground is wet. It has been raining."`,
+                finishedEx4PtLabel: "Portuguese:",
+                finishedEx4Pt: `"O chão está molhado. <span class="font-bold underline text-yellow-300">Tem chovido</span>."`,
+                finishedEx4VerbTense: "Verb Tense: Past Perfect Composite",
+                finishedEx5EnLabel: "English:",
+                finishedEx5En: `"The students are tired because they have been studying all day."`,
+                finishedEx5PtLabel: "Portuguese:",
+                finishedEx5Pt: `"Os alunos estão cansados porque <span class="font-bold underline text-yellow-300">estiveram estudando</span> o dia todo."`,
+                finishedEx5VerbTense: "Verb Tense: Past Perfect Composite",
+                finishedEx6EnLabel: "English:",
+                finishedEx6En: `"My hands are dirty because I have been gardening."`,
+                finishedEx6PtLabel: "Portuguese:",
+                finishedEx6Pt: `"Minhas mãos estão sujas porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> no jardim."`,
+                finishedEx6VerbTense: "Verb Tense: Past Perfect Composite",
+                finishedEx7EnLabel: "English:",
+                finishedEx7En: `"You look stressed. Have you been waiting for a long time?"`,
+                finishedEx7PtLabel: "Portuguese:",
+                finishedEx7Pt: `"Você parece estressado. <span class="font-bold underline text-yellow-300">Você esteve esperando</span> por muito tempo?"`,
+                finishedEx7VerbTense: "Verb Tense: Past Perfect Composite",
+                grammarHeader: "The Grammatical Structure",
+                grammarText: "The formula is simple and doesn't change. Just use the correct auxiliary for the subject.",
+                affirmativeHeader: "Affirmative Form",
+                affirmativeText: `<span class="explanation-formula italic">**Subject + have/has + been + verb(-ing)**</span>`,
+                negativeHeader: "Negative Form",
+                negativeText: `<span class="explanation-formula italic">**Subject + have/has + not + been + verb(-ing)**</span>`,
+                questionsHeader: "Questions",
+                questionsText: `<span class="explanation-formula italic">**Have/Has + subject + been + verb(-ing)?**</span>`,
+                differenceHeader: "Process vs. Result",
+                differenceText: "The main difference between the two tenses is what you want to emphasize.",
+                simpleHeader: "Present Perfect Simple",
+                simpleDesc: "Focuses on the RESULT or the quantity",
+                simpleExPt: "→ The focus is on the projects being completed.",
+                continuousHeader: "Present Perfect Continuous",
+                continuousDesc: "Focuses on the DURATION or the PROCESS",
+                continuousExPt: "→ The focus is on the time period of the action.",
+                copySuccess: "Text copied to clipboard!"
+            },
+            pt: {
+                button: "Switch to English",
+                mainHeader: "📚 O Guia Rápido do Present Perfect Continuous",
+                mainText: "Esse tempo verbal foca na **duração e na continuidade** de uma ação que **começou no passado**. Essa ação pode ainda estar em andamento ou **ter acabado de terminar**, mas o seu **efeito ou resultado** é visível no presente. O mais importante é o **processo** ou a **persistência** da atividade.",
+                coreConceptHeader: "O Conceito Central: Duração e Resultado",
+                coreConceptText: "Pense no Present Perfect Continuous como uma linha contínua que conecta o passado e o presente de duas formas.",
+                case1Title: "Caso 1: Ação que ainda está acontecendo",
+                case1TimelinePast: "O Passado",
+                case1TimelineAction: "Ação em Andamento...",
+                case1TimelinePresent: "O Presente",
+                case2Title: "Caso 2: Ação que acabou de terminar, mas com resultado visível",
+                case2TimelinePast: "O Passado",
+                case2TimelineAction: "Ação Concluída",
+                case2TimelineResult: "Resultado no Presente",
+                continuousActionTitle: "Exemplo - Ação Contínua",
+                continuousActionDesc: "Ação que começou no passado e ainda está em andamento.",
+                continuousEx1EnLabel: "Inglês:",
+                continuousEx1En: `"I have been driving this project for 10 years."`,
+                continuousEx1PtLabel: "Português:",
+                continuousEx1Pt: `"Eu <span class="font-bold underline text-yellow-300">estou conduzindo</span> este projeto <span class="font-bold underline text-yellow-300">há 10 anos</span>."`,
+                continuousEx1VerbTense: "Tempo verbal: Presente do Indicativo",
+                continuousEx2EnLabel: "Inglês:",
+                continuousEx2En: `"He has been managing the marketing team since 2020."`,
+                continuousEx2PtLabel: "Português:",
+                continuousEx2Pt: `"Ele <span class="font-bold underline text-yellow-300">tem gerenciado</span> a equipe de marketing <span class="font-bold underline text-yellow-300">desde 2020</span>."`,
+                continuousEx2VerbTense: "Tempo verbal: Presente Composto",
+                continuousEx3EnLabel: "Inglês:",
+                continuousEx3En: `"The company has been developing a new software for two years."`,
+                continuousEx3PtLabel: "Português:",
+                continuousEx3Pt: `"A empresa <span class="font-bold underline text-yellow-300">tem desenvolvido</span> um novo software <span class="font-bold underline text-yellow-300">há dois anos</span>."`,
+                continuousEx3VerbTense: "Tempo verbal: Presente Composto",
+                continuousEx4EnLabel: "Inglês:",
+                continuousEx4En: `"We have been planning our vacation for months."`,
+                continuousEx4PtLabel: "Português:",
+                continuousEx4Pt: `"Nós <span class="font-bold underline text-yellow-300">estamos planejando</span> nossas férias <span class="font-bold underline text-yellow-300">há meses</span>."`,
+                continuousEx4VerbTense: "Tempo verbal: Presente do Indicativo",
+                finishedActionTitle: "Exemplo - Ação Recém-Terminada",
+                finishedActionDesc: "Ação que acabou de terminar e tem um resultado visível no presente.",
+                finishedEx1EnLabel: "Inglês:",
+                finishedEx1En: `"I'm tired because I have been working all night."`,
+                finishedEx1PtLabel: "Português:",
+                finishedEx1Pt: `"Estou cansado porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> a noite toda."`,
+                finishedEx1VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                finishedEx2EnLabel: "Inglês:",
+                finishedEx2En: `"She has been crying, that's why her eyes are red."`,
+                finishedEx2PtLabel: "Português:",
+                finishedEx2Pt: `"Ela <span class="font-bold underline text-yellow-300">estava chorando</span>, é por isso que os olhos dela estão vermelhos."`,
+                finishedEx2VerbTense: "Tempo verbal: Pretérito Imperfeito do Indicativo",
+                finishedEx3EnLabel: "Inglês:",
+                finishedEx3En: `"He's out of breath because he has been running."`,
+                finishedEx3PtLabel: "Português:",
+                finishedEx3Pt: `"Ele está sem fôlego porque <span class="font-bold underline text-yellow-300">esteve correndo</span>."`,
+                finishedEx3VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                finishedEx4EnLabel: "Inglês:",
+                finishedEx4En: `"The ground is wet. It has been raining."`,
+                finishedEx4PtLabel: "Português:",
+                finishedEx4Pt: `"O chão está molhado. <span class="font-bold underline text-yellow-300">Tem chovido</span>."`,
+                finishedEx4VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                finishedEx5EnLabel: "Inglês:",
+                finishedEx5En: `"The students are tired because they have been studying all day."`,
+                finishedEx5PtLabel: "Português:",
+                finishedEx5Pt: `"Os alunos estão cansados porque <span class="font-bold underline text-yellow-300">estiveram estudando</span> o dia todo."`,
+                finishedEx5VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                finishedEx6EnLabel: "Inglês:",
+                finishedEx6En: `"My hands are dirty because I have been gardening."`,
+                finishedEx6PtLabel: "Português:",
+                finishedEx6Pt: `"Minhas mãos estão sujas porque <span class="font-bold underline text-yellow-300">estive trabalhando</span> no jardim."`,
+                finishedEx6VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                finishedEx7EnLabel: "Inglês:",
+                finishedEx7En: `"You look stressed. Have you been waiting for a long time?"`,
+                finishedEx7PtLabel: "Português:",
+                finishedEx7Pt: `"Você parece estressado. <span class="font-bold underline text-yellow-300">Você esteve esperando</span> por muito tempo?"`,
+                finishedEx7VerbTense: "Tempo verbal: Pretérito Perfeito Composto",
+                grammarHeader: "A Estrutura Gramatical",
+                grammarText: "A fórmula é simples e não muda. Basta usar o auxiliar correto para o sujeito.",
+                affirmativeHeader: "Forma Afirmativa",
+                affirmativeText: `<span class="explanation-formula italic">**Sujeto + have/has + been + verb(-ing)**</span>`,
+                negativeHeader: "Forma Negativa",
+                negativeText: `<span class="explanation-formula italic">**Sujeto + have/has + not + been + verb(-ing)**</span>`,
+                questionsHeader: "Perguntas",
+                questionsText: `<span class="explanation-formula italic">**Have/Has + sujeto + been + verb(-ing)?**</span>`,
+                differenceHeader: "Processo vs. Resultado",
+                differenceText: "A principal diferença entre os dois tempos é o que você quer destacar.",
+                simpleHeader: "Present Perfect Simple",
+                simpleDesc: "Foca no RESULTADO ou na quantidade",
+                simpleExPt: "→ O foco é que os projetos foram concluídos.",
+                continuousHeader: "Present Perfect Continuous",
+                continuousDesc: "Foca na DURAÇÃO ou no PROCESSO",
+                continuousExPt: "→ O foco é no período de tempo da ação.",
+                copySuccess: "Texto copiado para a área de transferência!"
+            }
+        };
+
+        const elementsToTranslate = {
+            'main-header': 'mainHeader',
+            'main-text': 'mainText',
+            'core-concept-header': 'coreConceptHeader',
+            'core-concept-text': 'coreConceptText',
+            'case-1-title': 'case1Title',
+            'case-1-timeline-past': 'case1TimelinePast',
+            'case-1-timeline-action': 'case1TimelineAction',
+            'case-1-timeline-present': 'case1TimelinePresent',
+            'case-2-title': 'case2Title',
+            'case-2-timeline-past': 'case2TimelinePast',
+            'case-2-timeline-action': 'case2TimelineAction',
+            'case-2-timeline-result': 'case2TimelineResult',
+            'continuous-action-title': 'continuousActionTitle',
+            'continuous-action-desc': 'continuousActionDesc',
+            'continuous-ex1-en-label': 'continuousEx1EnLabel',
+            'continuous-ex1-pt-label': 'continuousEx1PtLabel',
+            'continuous-ex1-verb-tense': 'continuousEx1VerbTense',
+            'continuous-ex2-en-label': 'continuousEx2EnLabel',
+            'continuous-ex2-pt-label': 'continuousEx2PtLabel',
+            'continuous-ex2-verb-tense': 'continuousEx2VerbTense',
+            'continuous-ex3-en-label': 'continuousEx3EnLabel',
+            'continuous-ex3-pt-label': 'continuousEx3PtLabel',
+            'continuous-ex3-verb-tense': 'continuousEx3VerbTense',
+            'continuous-ex4-en-label': 'continuousEx4EnLabel',
+            'continuous-ex4-pt-label': 'continuousEx4PtLabel',
+            'continuous-ex4-verb-tense': 'continuousEx4VerbTense',
+            'finished-action-title': 'finishedActionTitle',
+            'finished-action-desc': 'finishedActionDesc',
+            'finished-ex1-en-label': 'finishedEx1EnLabel',
+            'finished-ex1-pt-label': 'finishedEx1PtLabel',
+            'finished-ex1-verb-tense': 'finishedEx1VerbTense',
+            'finished-ex2-en-label': 'finishedEx2EnLabel',
+            'finished-ex2-pt-label': 'finishedEx2PtLabel',
+            'finished-ex2-verb-tense': 'finishedEx2VerbTense',
+            'finished-ex3-en-label': 'finishedEx3EnLabel',
+            'finished-ex3-pt-label': 'finishedEx3PtLabel',
+            'finished-ex3-verb-tense': 'finishedEx3VerbTense',
+            'finished-ex4-en-label': 'finishedEx4EnLabel',
+            'finished-ex4-pt-label': 'finishedEx4PtLabel',
+            'finished-ex4-verb-tense': 'finishedEx4VerbTense',
+            'finished-ex5-en-label': 'finishedEx5EnLabel',
+            'finished-ex5-pt-label': 'finishedEx5PtLabel',
+            'finished-ex5-verb-tense': 'finishedEx5VerbTense',
+            'finished-ex6-en-label': 'finishedEx6EnLabel',
+            'finished-ex6-pt-label': 'finishedEx6PtLabel',
+            'finished-ex6-verb-tense': 'finishedEx6VerbTense',
+            'finished-ex7-en-label': 'finishedEx7EnLabel',
+            'finished-ex7-pt-label': 'finishedEx7PtLabel',
+            'finished-ex7-verb-tense': 'finishedEx7VerbTense',
+            'grammar-header': 'grammarHeader',
+            'grammar-text': 'grammarText',
+            'affirmative-header': 'affirmativeHeader',
+            'affirmative-text': 'affirmativeText',
+            'negative-header': 'negativeHeader',
+            'negative-text': 'negativeText',
+            'questions-header': 'questionsHeader',
+            'questions-text': 'questionsText',
+            'difference-header': 'differenceHeader',
+            'difference-text': 'differenceText',
+            'simple-header': 'simpleHeader',
+            'simple-desc': 'simpleDesc',
+            'simple-ex-pt': 'simpleExPt',
+            'continuous-header': 'continuousHeader',
+            'continuous-desc': 'continuousDesc',
+            'continuous-ex-pt': 'continuousExPt',
+        };
+
+        let currentLang = 'pt';
+        const langSwitchBtn = document.getElementById('lang-switch-btn');
+        const messageBox = document.getElementById('message-box');
+
+        function showMessage(text) {
+            messageBox.textContent = text;
+            messageBox.classList.add('show');
+            setTimeout(() => {
+                messageBox.classList.remove('show');
+            }, 2000);
+        }
+
+        function updateContent() {
+            const langData = translations[currentLang];
+            langSwitchBtn.textContent = langData.button;
+            document.getElementById('main-title').textContent = currentLang === 'en' ? 'The Guide to Present Perfect Continuous' : 'O Guia do Present Perfect Continuous';
+
+            for (const [id, key] of Object.entries(elementsToTranslate)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = langData[key];
+                }
+            }
+        }
+
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            showMessage(translations[currentLang].copySuccess);
+        }
+
+        langSwitchBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            updateContent();
+        });
+
+        // Initialize content on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateContent();
+        });
+    </script>
+</body>
+</html>
